@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Trading Bot</title>
+</head>
+<body>
+    <h1>Trading Bot</h1>
+    <form action="{{ url_for('trade') }}" method="POST">
+        <label for="symbol">Symbol:</label>
+        <input type="text" id="symbol" name="symbol" value="EURUSD=X" required><br><br>
+
+        <label for="fast_sma">Fast SMA:</label>
+        <input type="number" id="fast_sma" name="fast_sma" value="30" required><br><br>
+
+        <label for="slow_sma">Slow SMA:</label>
+        <input type="number" id="slow_sma" name="slow_sma" value="60" required><br><br>
+
+        <label for="trade_mode">Trade Mode:</label>
+        <select id="trade_mode" name="trade_mode" required>
+            <option value="paper">Paper Trading</option>
+            <option value="real">Real Trading</option>
+        </select><br><br>
+
+        <button type="submit">Start Trading</button>
+    </form>
+</body>
+</html>
